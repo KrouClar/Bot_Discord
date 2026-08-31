@@ -1,5 +1,9 @@
 services:
   bot:
     build: .
-    container_name: bot-discord
+    container_name: zevent_bot
     restart: unless-stopped
+    environment:
+      - TOKEN=${TOKEN}
+      - VOICE_CHANNEL_CREATOR=${VOICE_CHANNEL_CREATOR}
+      - ZEVENT_CHANNEL_ID=${ZEVENT_CHANNEL_ID}
