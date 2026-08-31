@@ -34,7 +34,7 @@ class ZEventCalendar(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         # Remplacer par l'ID (clic droit sur le salon -> Copier l'identifiant)
-        self.channel_id = 1543917677628629093
+        self.channel_id = int(os.getenv("ZEVENT_CHANNEL_ID"))
 
         base_dir = os.path.dirname(os.path.abspath(__file__))
         self.state_path = os.path.join(base_dir, "state.json")
